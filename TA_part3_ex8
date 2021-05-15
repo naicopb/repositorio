@@ -1,0 +1,8 @@
+clc; clear;
+
+f = @(x) 1./(1+25*x.^2);
+aprox1=integral(f,-1,+1)
+x = chebfun('x');
+g = 1./(1+25*x.^2);
+aprox2=sum(g);
+aprox1-aprox2
